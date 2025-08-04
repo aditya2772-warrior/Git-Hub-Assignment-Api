@@ -1,0 +1,7 @@
+{
+   "getUser": "https://jsonplaceholder.typicode.com/posts",
+   "postUser": "https://jsonplaceholder.typicode.com/posts",
+   "putUser": "https://jsonplaceholder.typicode.com/posts/1",
+   "deleteUser": "https://jsonplaceholder.typicode.com/posts/3"
+  
+}
