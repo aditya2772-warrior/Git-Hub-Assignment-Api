@@ -1,4 +1,4 @@
-name: 🧪 Karate API Tests CI
+name:  Karate API Tests CI
 
 on:
   push:
