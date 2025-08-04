@@ -1,6 +1,6 @@
 Feature: writing the test case for the delete 
 
-Background:
+Background: 
   * def endpoints = read('classpath:features/endpoints.json')
   * url endpoints.deleteUser
 
