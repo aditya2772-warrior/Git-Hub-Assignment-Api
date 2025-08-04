@@ -1,4 +1,4 @@
-name: Run Karate API Tests
+name: 🧪 Karate API Tests CI
 
 on:
   push:
@@ -7,25 +7,33 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  run-karate-tests:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name:  Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Java
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: '17'
+      - name:  Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'  
 
-    - name: Cache Maven packages
-      uses: actions/cache@v4
-      with:
-        path: ~/.m2
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-maven
+      - name:  Set up Maven cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven
 
-    - name: Run Karate tests
-      run: mvn test
+      - name:  Run Karate API tests
+        run: mvn test
+
+      - name:  Upload Karate HTML reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: karate-report
+          path: target/karate-reports
