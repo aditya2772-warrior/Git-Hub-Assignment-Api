@@ -8,7 +8,7 @@ Background:
 Scenario: Get request from jsonplaceholders
   Given method get
   Then status 200
-  * print response
+  # * print response
 
 @Get  @GetByID
 Scenario: Get request from jsonplaceholders by single id 

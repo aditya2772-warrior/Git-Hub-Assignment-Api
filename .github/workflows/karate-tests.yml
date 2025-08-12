@@ -3,30 +3,42 @@ name:  Karate API Tests CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'src/test/resources/features/**/*.feature'
+      - 'src/test/resources/features/**/*.json'
+      - 'src/test/resources/features/**/*.js'
+      - 'src/test/java/features/**'
+      - 'pom.xml'
+
   pull_request:
     branches: [ main ]
+    paths:
+      - 'src/test/resources/features/**/*.feature'
+      - 'src/test/resources/features/**/*.json'
+      - 'src/test/resources/features/**/*.js'
+      - 'src/test/java/features/**'
+      - 'pom.xml'
 
 jobs:
   run-karate-tests:
     runs-on: ubuntu-latest
 
     steps:
-      - name:  Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name:  Set up Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'  
+          java-version: '17'
 
-      - name:  Set up Maven cache
+      - name:  Cache Maven packages
         uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven
+          restore-keys: ${{ runner.os }}-maven
 
       - name:  Run Karate API tests
         run: mvn test
