@@ -49,7 +49,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-08-04 10:25:28 AM</div>
+    <div>2025-08-13 12:33:34 PM</div>
   </div>
 </div>
 
@@ -84,7 +84,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>743</span>
+              <span>ms:</span>&nbsp;<span>601</span>
             </div>
           </div>
           <div class="step-row">
@@ -135,7 +135,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>url endpoints.putUser</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -224,7 +224,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method put</span>
       </div>
     </div>
-    <div class="time-cell passed">741</div>
+    <div class="time-cell passed">598</div>
   </div>
 
    
@@ -233,7 +233,50 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.19">12:33:33.787 request:
+1 &gt; PUT https://jsonplaceholder.typicode.com/posts/1
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 53
+1 &gt; Host: jsonplaceholder.typicode.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;id&quot;:1,&quot;title&quot;:&quot;funksuk&quot;,&quot;body&quot;:&quot;Vangdu&quot;,&quot;userId&quot;:1}
+
+12:33:34.388 response time in milliseconds: 599
+1 &lt; 200
+1 &lt; Date: Wed, 13 Aug 2025 07:03:33 GMT
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Cache-Control: no-cache
+1 &lt; Etag: W/&quot;46-A1CT8gBsARna7v3OLv6ghE5aT8g&quot;
+1 &lt; Expires: -1
+1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+1 &lt; Pragma: no-cache
+1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=UMsLDuZuzVCHtyxvX0xEoOv701TaG8ISTpPr9zXIF4o%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1755068613&quot;}],&quot;max_age&quot;:3600}
+1 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=UMsLDuZuzVCHtyxvX0xEoOv701TaG8ISTpPr9zXIF4o%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1755068613&quot;
+1 &lt; Server: cloudflare
+1 &lt; Vary: Origin, Accept-Encoding
+1 &lt; Via: 2.0 heroku-router
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Powered-By: Express
+1 &lt; X-Ratelimit-Limit: 1000
+1 &lt; X-Ratelimit-Remaining: 994
+1 &lt; X-Ratelimit-Reset: 1755068658
+1 &lt; Cf-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 96e65a749ba4ef54-LHR
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;funksuk&quot;,
+  &quot;body&quot;: &quot;Vangdu&quot;,
+  &quot;userId&quot;: 1
+}
+
+</div>   
 
   
 
@@ -308,7 +351,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>print response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -317,7 +360,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.22">12:33:34.391 [print] {
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;funksuk&quot;,
+  &quot;body&quot;: &quot;Vangdu&quot;,
+  &quot;userId&quot;: 1
+}
+ 
+</div>   
 
   
 
@@ -337,7 +387,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>774</span>
+              <span>ms:</span>&nbsp;<span>594</span>
             </div>
           </div>
           <div class="step-row">
@@ -477,7 +527,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method put</span>
       </div>
     </div>
-    <div class="time-cell passed">772</div>
+    <div class="time-cell passed">591</div>
   </div>
 
    
@@ -486,7 +536,50 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.36">12:33:34.403 request:
+1 &gt; PUT https://jsonplaceholder.typicode.com/posts/1
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 53
+1 &gt; Host: jsonplaceholder.typicode.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;id&quot;:1,&quot;title&quot;:&quot;funksuk&quot;,&quot;body&quot;:&quot;Vangdu&quot;,&quot;userId&quot;:1}
+
+12:33:34.992 response time in milliseconds: 589
+1 &lt; 200
+1 &lt; Date: Wed, 13 Aug 2025 07:03:34 GMT
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Cache-Control: no-cache
+1 &lt; Etag: W/&quot;46-A1CT8gBsARna7v3OLv6ghE5aT8g&quot;
+1 &lt; Expires: -1
+1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+1 &lt; Pragma: no-cache
+1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=NPXtdww4LeRfPvLx2P0EmOTdm2m9BxvepJbQYssGIjM%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1755068614&quot;}],&quot;max_age&quot;:3600}
+1 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=NPXtdww4LeRfPvLx2P0EmOTdm2m9BxvepJbQYssGIjM%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1755068614&quot;
+1 &lt; Server: cloudflare
+1 &lt; Vary: Origin, Accept-Encoding
+1 &lt; Via: 2.0 heroku-router
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Powered-By: Express
+1 &lt; X-Ratelimit-Limit: 1000
+1 &lt; X-Ratelimit-Remaining: 993
+1 &lt; X-Ratelimit-Reset: 1755068658
+1 &lt; Cf-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 96e65a786f3863e1-LHR
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;funksuk&quot;,
+  &quot;body&quot;: &quot;Vangdu&quot;,
+  &quot;userId&quot;: 1
+}
+
+</div>   
 
   
 
@@ -533,7 +626,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>match response.title == &#39;funksuk&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -561,7 +654,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>print response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -570,7 +663,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.39">12:33:34.994 [print] {
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;funksuk&quot;,
+  &quot;body&quot;: &quot;Vangdu&quot;,
+  &quot;userId&quot;: 1
+}
+ 
+</div>   
 
   
 
