@@ -27,11 +27,19 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Optional: Common IO utilities (if needed for file handling) -->
+    <!-- Commons IO utilities -->
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>2.11.0</version>
+    </dependency>
+
+    <!-- (Optional) Legacy JUnit 3 for backward compatibility -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 

@@ -1,38 +1,12 @@
-// package com.karate;
+package com.karate;
 
-// import junit.framework.Test;
-// import junit.framework.TestCase;
-// import junit.framework.TestSuite;
+import com.intuit.karate.junit5.Karate;
 
-// /**
-//  * Unit test for simple App.
-//  */
-// public class AppTest 
-//     extends com.oracle.truffle.api.impl.TVMCI.Test
-// {
-//     /**
-//      * Create the test case
-//      *
-//      * @param testName name of the test case
-//      */
-//     public AppTest( String testName )
-//     {
-//         super( testName );
-//     }
+class AppTest {
 
-//     /**
-//      * @return the suite of tests being tested
-//      */
-//     public static Test suite()
-//     {
-//         return new TestSuite( AppTest.class );
-//     }
-
-//     /**
-//      * Rigourous Test :-)
-//      */
-//     public void testApp()
-//     {
-//         assertTrue( true );
-//     }
-// }
+    @Karate.Test
+    Karate testAll() {
+        // Runs all *.feature files in this package
+        return Karate.run().relativeTo(getClass());
+    }
+}
