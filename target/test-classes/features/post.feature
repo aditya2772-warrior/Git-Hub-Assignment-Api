@@ -53,4 +53,4 @@ Scenario: Post Request validation using external file
 #   When method post
 #   Then status 201
 #   And match response.title == "#notnull"
-#   * print response
+
