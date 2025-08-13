@@ -62,8 +62,8 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven
 
-      - name: Run Karate tests and generate HTML report
-        run: mvn clean verify -Dkarate.options="--format json:target/karate-reports/karate.json"
+      - name: Run Karate tests
+        run: mvn clean test
 
       - name: Upload Karate HTML reports
         if: always()

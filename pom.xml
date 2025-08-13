@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -19,14 +19,6 @@
   </properties>
 
   <dependencies>
-    <!-- Optional: legacy JUnit -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-
     <!-- Karate JUnit 5 Dependency -->
     <dependency>
       <groupId>com.intuit.karate</groupId>
@@ -35,51 +27,22 @@
       <scope>test</scope>
     </dependency>
 
-<dependency>
-    <groupId>net.masterthought</groupId>
-    <artifactId>cucumber-reporting</artifactId>
-    <version>5.7.8</version> <!-- ✅ Valid version -->
-</dependency>
-
-
-<dependency>
-    <groupId>commons-io</groupId>
-    <artifactId>commons-io</artifactId>
-    <version>2.11.0</version> <!-- You can use the latest available version -->
-</dependency>
+    <!-- Optional: Common IO utilities (if needed for file handling) -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.11.0</version>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
+      <!-- Surefire plugin for running tests -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0</version>
       </plugin>
-
-    <plugin>
-  <groupId>net.masterthought</groupId>
-  <artifactId>maven-cucumber-reporting</artifactId>
-  <version>5.7.0</version>
-  <executions>
-    <execution>
-      <id>generate-cucumber-html-reports</id>
-      <phase>verify</phase>
-      <goals>
-        <goal>generate</goal>
-      </goals>
-      <configuration>
-        <projectName>Karate Report</projectName>
-        <reportOutputDirectory>${project.build.directory}/cucumber-html-reports</reportOutputDirectory>
-        <jsonFiles>
-          <param>${project.build.directory}/karate-reports/karate.json</param>
-        </jsonFiles>
-      </configuration>
-    </execution>
-  </executions>
-</plugin>
-
-
     </plugins>
   </build>
 
