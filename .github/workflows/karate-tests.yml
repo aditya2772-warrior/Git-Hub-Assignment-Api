@@ -1,4 +1,4 @@
-name: Karate API Tests CI/CD 
+name: Karate API Tests CI/CD
 
 on:
   push:
@@ -62,15 +62,15 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven
 
-      - name: Run Karate API tests
-        run: mvn test
+      - name: Run Karate tests and generate HTML report
+        run: mvn clean verify -Dkarate.options="--format json:target/karate-reports/karate.json"
 
       - name: Upload Karate HTML reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: karate-report
-          path: target/karate-reports
+          path: target/cucumber-html-reports
 
   deploy:
     runs-on: ubuntu-latest
@@ -81,4 +81,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Simulate Deployment
-        run: echo " Deploying application..."
+        run: echo "Deploying application..."
