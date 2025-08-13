@@ -3,7 +3,7 @@
 #   Background:
 #     * url 'https://reqres.in'
 
-# @AT
+
 # Scenario: Login and fetch users with token
 
 #     # Step 1: Login and extract token
