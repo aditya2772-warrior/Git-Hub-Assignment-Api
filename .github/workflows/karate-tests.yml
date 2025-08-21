@@ -9,6 +9,7 @@ on:
       - 'src/test/resources/features/**/*.js'
       - 'src/test/java/features/**'
       - 'pom.xml'
+          
 
   pull_request:
     branches: [ main ]
